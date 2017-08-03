@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_sc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -25,32 +25,33 @@
         android:text="@string/x" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/right_icon"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/right"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/textView"
+        android:layout_marginBottom="89dp"
         android:layout_marginEnd="34dp"
-        android:layout_marginBottom="89dp" />
+        android:layout_toStartOf="@+id/textView"
+        android:background="@drawable/right"
+        android:onClick="click" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bt_fal"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/falsse"
-
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/right_icon"
         android:layout_marginEnd="18dp"
-        android:layout_alignTop="@+id/button"
-        android:layout_alignParentEnd="true" />
+        android:background="@drawable/falsse"
+        android:onClick="click" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_ans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="100dp"
         android:text="@string/color"
-        android:layout_above="@+id/button"
+        android:layout_above="@+id/right_icon"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="76dp" />
 </RelativeLayout>
