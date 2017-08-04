@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     double score = 0;
     TextView counter, answr;
     int Answer;
-  static  int righCount = 0, wrgCount = 0;
+  static  int righCount = 1, wrgCount = 1;
     Button rigtbt,wrongbt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
        int n = color.nextInt(5);
        int[] arrCol = {Color.BLUE,Color.RED,Color.YELLOW,Color.GREEN,Color.BLACK};
        int ind = color.nextInt(5);
-       answr.setTextColor(ind);
+       answr.setTextColor(arrCol[ind]);
        answr.setText(colors[n]);
 
        if(ind == n)
@@ -95,10 +95,10 @@ public void click(View view)
 }
 public void GameOver(){
 
-    if (righCount == 10 || wrgCount == 10)
+    if (righCount >= 10 || wrgCount >= 10)
     {
         Toast.makeText(this,"GAME OVER YOUR SCORE IS EQUALE  " + righCount/wrgCount *100 + "%" ,Toast.LENGTH_LONG).show();
-    System.exit(0);
+   // System.exit(0);
     }
 }
 }
