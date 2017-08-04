@@ -1,6 +1,7 @@
 package com.example.yehia.guessthecolor;
 
 import android.graphics.Color;
+import android.os.SystemClock;
 import android.support.annotation.ColorInt;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -65,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void wrgBt(){
 
-        clikcount();
-        rand();
+
         if (Answer == 0)
         {
             wrgCount++;
@@ -92,12 +92,13 @@ public void click(View view)
             wrgBt();
             break;
     }
+    SystemClock.sleep(200);
 }
 public void GameOver(){
 
     if (righCount >= 10 || wrgCount >= 10)
     {
-        Toast.makeText(this,"GAME OVER YOUR SCORE IS EQUALE  " + righCount/wrgCount *100 + "%" ,Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"GAME OVER YOUR SCORE IS EQUALE  " + righCount/wrgCount * 100 + "%" ,Toast.LENGTH_LONG).show();
    // System.exit(0);
     }
 }
