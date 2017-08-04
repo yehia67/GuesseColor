@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Guess the Color</string>
     <string name="x">0</string>
-    <string name="color">Red</string>
+    <string name="color">YELLOW</string>
 </resources>
